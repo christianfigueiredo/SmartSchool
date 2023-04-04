@@ -18,9 +18,9 @@ namespace SmartSchool.WebAPI.Data
         public DbSet<Disciplina> Disciplinas { get; set; }
         public DbSet<AlunoDisciplina> AlunoDisciplinas { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            modelBuilder.Entity<AlunoDisciplina>()
+            builder.Entity<AlunoDisciplina>()
                 .HasKey(AD => new { AD.AlunoId, AD.DisciplinaId });
 
             builder.Entity<Professor>()
