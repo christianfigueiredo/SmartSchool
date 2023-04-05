@@ -7,11 +7,11 @@ namespace SmartSchool.WebAPI.Data
 {
     public interface IRepository
     {
-        void Add();
-        
-        void Update();
+        void Add<T>(T entity) where T : class;
 
-        void Delete();
+        void Update<T>(T entity) where T : class;
+
+        void Delete<T>(T entity) where T : class;
 
         bool SaveChanges();
 

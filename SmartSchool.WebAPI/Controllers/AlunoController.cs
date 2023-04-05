@@ -48,9 +48,12 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpPost]  
         public IActionResult Post(Aluno aluno)
         {
-            _context.Add(aluno);
-            _context.SaveChanges();
-            return Ok(aluno);
+            _repository.Add(aluno);
+            if (_repository.SaveChanges())
+            {
+                return Ok(aluno);
+            }
+            return BadRequest("Aluno não cadastrado.");            
         }
 
         [HttpPut("{id}")]
@@ -58,19 +61,27 @@ namespace SmartSchool.WebAPI.Controllers
         {   
             var alunoDB = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
             if (alunoDB == null) return BadRequest("O aluno não foi encontrado.");
-            _context.Update(aluno);
-            _context.SaveChanges();
-            return Ok(aluno);
+
+             _repository.Update(aluno);
+            if (_repository.SaveChanges())
+            {
+                return Ok(aluno);
+            }
+            return BadRequest("Aluno não Atualizado.");
         }
 
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Aluno aluno)
         {
             var alunoDB = _context.Alunos.AsNoTracking().FirstOrDefault(a => a.Id == id);
-            if (alunoDB == null) return BadRequest("O aluno não foi encontrado.");            
-            _context.Update(aluno);
-            _context.SaveChanges(); 
-            return Ok(aluno);
+            if (alunoDB == null) return BadRequest("O aluno não foi encontrado.");    
+
+             _repository.Update(aluno);
+            if (_repository.SaveChanges())
+            {
+                return Ok(aluno);
+            }
+            return BadRequest("Aluno não Atualizado.");
         }
 
         [HttpDelete("{id}")]
@@ -78,9 +89,13 @@ namespace SmartSchool.WebAPI.Controllers
         {   
             var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
             if (aluno == null) return BadRequest("O aluno não foi encontrado.");
-            _context.Remove(aluno);
-            _context.SaveChanges();            
-            return Ok();
+
+             _repository.Delete(aluno);
+            if (_repository.SaveChanges())
+            {
+                return Ok("Aluno Deletado.");
+            }
+            return BadRequest("Aluno não Deletado.");
         }
        
         
