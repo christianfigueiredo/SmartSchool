@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SmartSchool.WebAPI.Models;
+using SmartSchool.WebAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace SmartSchool.WebAPI.Controllers
 {
