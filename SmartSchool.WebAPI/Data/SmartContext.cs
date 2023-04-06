@@ -17,6 +17,8 @@ namespace SmartSchool.WebAPI.Data
         public DbSet<Professor> Professores { get; set; }
         public DbSet<Disciplina> Disciplinas { get; set; }
         public DbSet<AlunoDisciplina> AlunoDisciplinas { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<AlunoCurso> AlunoCursos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
