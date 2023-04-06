@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1PpRzFilLEg887s8NQcgJHxZKCb6qZqrvMsSHVeJC2MQ2UN8LKaNFdlG0d/5BzAbKw6CsEmT72HDWOLLJWyGfQ==",
+  "dgSpecHash": "lE2+NPpCKp7Ue2fGvcoTfAlxWJlNgk8mwQuu6yP1WlchbHorE5zDxJNvj6pcFgPUDdAaccXaidmlma9VRceQAw==",
   "success": true,
-  "projectFilePath": "F:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
+  "projectFilePath": "f:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\chris\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
