@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SmartSchool.WebAPI.Models;
 using SmartSchool.WebAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using SmartSchool.WebAPI.DTos;
 
 namespace SmartSchool.WebAPI.Controllers
 {
@@ -23,8 +24,9 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var result = _repository.GetAllAlunos(true);
-            return Ok(result);
+            var alunos = _repository.GetAllAlunos(true);
+
+            return Ok(alunos);            
         }
 
         [HttpGet("{id:int}")]

@@ -35,7 +35,12 @@ namespace SmartSchool.WebAPI
             
             services.AddScoped<IRepository, Repository>();
 
+
             services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            
+            
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
         }
 
         
