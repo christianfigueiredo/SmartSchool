@@ -61,7 +61,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Professor professor)
         {
-            var professorDB = _repository.GetProfessorById(id);
+            var professorDB = _repository.GetProfessorById(id, false);
             if (professorDB == null) return BadRequest("O professor não foi encontrado.");
             _repository.Update(professor);
             _repository.SaveChanges();
@@ -71,7 +71,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var professor = _repository.GetProfessorById(id);
+            var professor = _repository.GetProfessorById(id, false);
             if (professor == null) return BadRequest("O professor não foi encontrado.");
 
             _repository.Delete(professor);

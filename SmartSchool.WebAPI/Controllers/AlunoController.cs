@@ -63,7 +63,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Aluno aluno)
         {
-            var alunoDB = _repository.GetAlunoById(id);
+            var alunoDB = _repository.GetAlunoById(id,false);
             if (alunoDB == null) return BadRequest("O aluno não foi encontrado.");    
 
              _repository.Update(aluno);
@@ -77,7 +77,7 @@ namespace SmartSchool.WebAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {   
-            var aluno = _repository.GetAlunoById(id);
+            var aluno = _repository.GetAlunoById(id,false);
             if (aluno == null) return BadRequest("O aluno não foi encontrado.");
 
              _repository.Delete(aluno);
