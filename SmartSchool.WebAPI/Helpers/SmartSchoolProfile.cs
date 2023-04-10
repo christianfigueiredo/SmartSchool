@@ -17,7 +17,7 @@ namespace SmartSchool.WebAPI.Helpers
                 )
                 .ForMember(
                     dest => dest.Idade,
-                    opt => opt.MapFrom(src => DateTime.Now.Year - src.DataNasc.Year)
+                    opt => opt.MapFrom(src => src.DataNasc.GetCurrentAge())
                 );
         }
     }
