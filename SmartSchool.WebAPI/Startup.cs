@@ -40,6 +40,12 @@ namespace SmartSchool.WebAPI
             
             
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("SmartSchoolAPI", 
+                new Microsoft.OpenApi.Models.OpenApiInfo { Title = "SmartSchool API", Version = "v1" });
+            });
             
         }
 
@@ -54,6 +60,8 @@ namespace SmartSchool.WebAPI
             // app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseSwagger();
 
             // app.UseAuthorization();
 
