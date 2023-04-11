@@ -10208,11 +10208,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
+      "projectUniqueName": "F:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
       "projectName": "SmartSchool.WebAPI",
-      "projectPath": "f:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
+      "projectPath": "F:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\SmartSchool.WebAPI.csproj",
       "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-      "outputPath": "f:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\obj\\",
+      "outputPath": "F:\\Projetos\\outros\\aspnetcore\\SmartSchool\\SmartSchool.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -10227,6 +10227,7 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

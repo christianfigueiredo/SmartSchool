@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using SmartSchool.WebAPI.DTos;
+using SmartSchool.WebAPI.Models;
 
 namespace SmartSchool.WebAPI.Helpers
 {
@@ -10,7 +12,7 @@ namespace SmartSchool.WebAPI.Helpers
     {
         public SmartSchoolProfile()
         {
-            CreateMap<Models.Aluno, DTos.AlunoDto>()
+            CreateMap<Aluno, DTos.AlunoDto>()
                 .ForMember(
                     dest => dest.Nome,
                     opt => opt.MapFrom(src => $"{src.Nome} {src.Sobrenome}")
@@ -19,6 +21,19 @@ namespace SmartSchool.WebAPI.Helpers
                     dest => dest.Idade,
                     opt => opt.MapFrom(src => src.DataNasc.GetCurrentAge())
                 );
+            CreateMap<AlunoDto,Aluno>();
+            CreateMap<Aluno,AlunoRegistrarDto>().ReverseMap();
+
+            CreateMap<Professor, DTos.ProfessorDto>()
+                .ForMember(
+                    dest => dest.Nome,
+                    opt => opt.MapFrom(src => $"{src.Nome} {src.Sobrenome}")
+                );
+            CreateMap<ProfessorDto,Professor>();
+            CreateMap<Professor,ProfessorRegistrarDto>().ReverseMap();
+
+            
+            
         }
     }
 }
