@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartSchool.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:SmartSchool.WebAPI.Controllers.AlunoController">
+            <summary>
+            Versão 1.0
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.#ctor(SmartSchool.WebAPI.Data.IRepository,AutoMapper.IMapper)">
+            <summary>
+            Método Construtor
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>        
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.Get">
+            <summary>
+            Método responsável por retornar todos os alunos
+            </summary>               
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.GetRegister">
+            <summary>
+            Método responsável por retornar todos os alunos por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.GetById(System.Int32)">
+            <summary>
+            Método responsável por retornar todos os alunos por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.Post(SmartSchool.WebAPI.DTos.AlunoRegistrarDto)">
+            <summary>
+            Método responsável por retornar todos os alunos por nome
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.Put(System.Int32,SmartSchool.WebAPI.DTos.AlunoRegistrarDto)">
+            <summary>
+            Método responsável por atualizar todos os alunos por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.Patch(System.Int32,SmartSchool.WebAPI.DTos.AlunoRegistrarDto)">
+            <summary>
+            Método responsável por atualizar parcialmente todos os alunos por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.AlunoController.Delete(System.Int32)">
+            <summary>
+            Método responsável por deletar todos os alunos por Id
+            </summary>
+        </member>
+        <member name="T:SmartSchool.WebAPI.Controllers.ProfessorController">
+            <summary>
+            Versão 1.0
+            </summary>    
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.#ctor(SmartSchool.WebAPI.Data.IRepository,AutoMapper.IMapper)">
+            <summary>
+            Método Construtor
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>   
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.Get">
+            <summary>
+            Método responsável por retornar todos os professores
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.GetById(System.Int32)">
+            <summary>
+            Método responsável por retornar todos os professores por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.Post(SmartSchool.WebAPI.DTos.ProfessorRegistrarDto)">
+            <summary>
+            Método responsável por retornar todos os professores por nome
+            </summary>        
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.Put(System.Int32,SmartSchool.WebAPI.Models.Professor)">
+            <summary>
+            Método responsável por atualizar todos os professores por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.Patch(System.Int32,SmartSchool.WebAPI.Models.Professor)">
+            <summary>
+            Método responsável por atualizar todos os professores por Id
+            </summary>
+        </member>
+        <member name="M:SmartSchool.WebAPI.Controllers.ProfessorController.Delete(System.Int32)">
+            <summary>
+            Método responsável por deletar todos os professores por Id
+            </summary>
+        </member>
+    </members>
+</doc>

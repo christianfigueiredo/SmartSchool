@@ -13,9 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Sqlite;
 using SmartSchool.WebAPI.Data;
 using Microsoft.EntityFrameworkCore;
-
-
-
+using System.Reflection;
+using Microsoft.Extensions.Options;
 
 namespace SmartSchool.WebAPI
 {
@@ -41,12 +40,22 @@ namespace SmartSchool.WebAPI
             
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("SmartSchoolAPI", 
-                new Microsoft.OpenApi.Models.OpenApiInfo { Title = "SmartSchool API", Version = "v1" });
+                options.SwaggerDoc("SmartSchoolAPI", 
+                new Microsoft.OpenApi.Models.OpenApiInfo() 
+                { 
+                    Title = "SmartSchool API", 
+                    Version = "v1" 
+                }
+            );            
+
+            var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            var xmlCommentsFullPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+
+            options.IncludeXmlComments(xmlCommentsFullPath);
+
             });
-            
         }
 
         
