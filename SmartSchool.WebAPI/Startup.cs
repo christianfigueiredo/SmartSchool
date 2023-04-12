@@ -61,7 +61,13 @@ namespace SmartSchool.WebAPI
 
             app.UseRouting();
 
-            app.UseSwagger();
+            app.UseSwagger()
+                .UseSwaggerUI(options => 
+            {
+                options.SwaggerEndpoint("/swagger/SmartSchoolAPI/swagger.json", "SmartSchoolAPI");
+                options.RoutePrefix = "";
+            });
+                            
 
             // app.UseAuthorization();
 
