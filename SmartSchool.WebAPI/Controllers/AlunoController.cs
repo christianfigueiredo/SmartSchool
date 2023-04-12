@@ -137,8 +137,7 @@ namespace SmartSchool.WebAPI.Controllers
                 return Ok("Aluno Deletado.");
             }
             return BadRequest("Aluno não Deletado.");
-        }
-       
+        }      
         
     }
 }
