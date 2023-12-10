@@ -4,19 +4,19 @@
     {
         public Disciplina() { }
 
-         public Disciplina(int id, string nome, int professorId) 
+        public Disciplina(int id, string nome, int professorId)
         {
             this.Id = Id;
             this.Nome = nome;
-            this.ProfessorId = professorId;   
+            this.ProfessorId = professorId;
         }
 
-        public 	int Id { get; set; }       
+        public int Id { get; set; }
         public string Nome { get; set; }
         public int ProfessorId { get; set; }
-        public Professor Professor { get; set; }   
+        public Professor Professor { get; set; }
 
-        public IEnumerable<AlunoDisciplina> AlunosDisciplinas { get; set; } 
-            
+        public IEnumerable<AlunoDisciplina> AlunosDisciplinas { get; set; }
+
     }
 }
