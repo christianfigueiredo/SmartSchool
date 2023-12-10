@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SmartSchool.API.Data;
 
 namespace SmartSchool.API
 {
@@ -26,6 +28,10 @@ namespace SmartSchool.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMvc();
+            string connection = Configuration.GetConnectionString("StringConexao");
+            services.AddDbContextPool<Contexto>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
