@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SmartSchool.API.Data;
 
 namespace SmartSchool.API.Controllers
 {
@@ -7,13 +8,17 @@ namespace SmartSchool.API.Controllers
     [ApiController]
     public class ProfessorController : ControllerBase
     {
-        public ProfessorController() {}
+        private readonly Contexto _context;
+        public ProfessorController(Contexto contexto) 
+        {
+            _context = contexto;
+        }
 
         [HttpGet]
 
         public IActionResult Get()
         {
-            return Ok("Professor : Chrizão");
+            return Ok(_context.Professores);
         }
           
     }

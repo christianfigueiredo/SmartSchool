@@ -26,12 +26,11 @@ namespace SmartSchool.API
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllers();
+        {            
             services.AddMvc();
             string connection = Configuration.GetConnectionString("StringConexao");
             services.AddDbContextPool<Contexto>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
-
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
